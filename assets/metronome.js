@@ -1,5 +1,5 @@
-let meter;
-let tempo;
+let meter = 0;
+let tempo = 0;
 
 function grabMeter() {
     if(document.getElementById("three").checked)
@@ -14,6 +14,12 @@ function grabMeter() {
     }    
 }
 
+// Need a function that calculates the setTimeout => 60000 / (meter * 1000);
+function counting() {
+    setTimeout(counting, 1000);
+    console.log("bullshit");
+}
+
 function grabTempo() {
     tempo = document.getElementById("tempo").value;
     console.log(tempo);
@@ -22,4 +28,5 @@ function grabTempo() {
 function clickButton() {
     grabMeter();
     grabTempo();
+    counting();
 }
