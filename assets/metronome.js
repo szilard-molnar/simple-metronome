@@ -15,8 +15,9 @@ function grabMeter() {
 }
 
 // Need a function that calculates the setTimeout => 60000 / (meter * 1000);
-function counting() {
-    setTimeout(counting, 1000);
+function counting(meter) {
+    let myTime = 60000 / tempo;
+    setTimeout(counting, myTime);
     console.log("bullshit");
 }
 
@@ -28,5 +29,5 @@ function grabTempo() {
 function clickButton() {
     grabMeter();
     grabTempo();
-    counting();
+    counting(tempo);
 }
