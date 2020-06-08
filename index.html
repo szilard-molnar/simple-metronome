@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="./assets/metronome.js"></script>
     <title>Metronome</title>
 </head>
 <body>
@@ -25,17 +24,21 @@
         </div>
 
         <button class="startButton btn-primary" onclick="clickButton()">Start!</button>
+        <button type="button" class="stopButton btn-danger" onclick="stopCounting()">Stop!</button>
 
         <div class="settingTempo">
             <label for="tempo">Tempo:</label>
             <br>
-            <input type="number" id="tempo" name="tempo" min=40 max=200 />
+            <input type="number" id="tempo" name="tempo" min=40 max=200 required/>
         </div>
     </div>
 
     </div>
-    <div class="dots">
-        <div class="oneDot"></div>
+    <div id="dots">
+        
     </div>
+
+    <script src="./assets/metronome.js"></script>
+
 </body>
 </html>

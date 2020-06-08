@@ -26,18 +26,24 @@ label {
     margin-top: 2%;
 }
 
-.dots {
+.stopButton {
+    width: 8%;
+    height: 30px;
+    margin-top: 2%;
+}
+
+#dots {
     text-align: center;
     margin-top: 3%;
     width: 30%;
     margin-left: 35%;
 }
 
-.oneDot {
-    display: none;
-    border: 2px solid black;
-    background-color: violet;
-    width: 25px;
-    height: 25px;
+span {
+    border: 10px solid black;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    background-color: violet;
+    margin-left: 10px;
 }

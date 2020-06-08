@@ -15,10 +15,22 @@ function grabMeter() {
 }
 
 // Need a function that calculates the setTimeout => 60000 / (meter * 1000);
-function counting(meter) {
+function counting() {
     let myTime = 60000 / tempo;
     setTimeout(counting, myTime);
-    console.log("bullshit");
+    console.log("this");
+    let newDots = document.getElementById("dots");
+    let dotSpan = document.createElement("span");
+    // dotSpan.style.border =  "3px solid black";
+    // dotSpan.style.height = "300px";
+    // dotSpan.style.width = "300px";
+    // dotSpan.style.marginLeft = "10px";
+    // dotSpan.style.backgroundColor = "purple";
+    newDots.appendChild(dotSpan);
+}
+
+function stopCounting() {
+    clearTimeout(counting());
 }
 
 function grabTempo() {
@@ -29,5 +41,5 @@ function grabTempo() {
 function clickButton() {
     grabMeter();
     grabTempo();
-    counting(tempo);
+    counting();
 }
