@@ -1,5 +1,7 @@
 let meter = 0;
 let tempo = 0;
+let array = [];
+let myTimeOut;
 
 function grabMeter() {
     if(document.getElementById("three").checked)
@@ -17,7 +19,7 @@ function grabMeter() {
 // Need a function that calculates the setTimeout => 60000 / (meter * 1000);
 function counting() {
     let myTime = 60000 / tempo;
-    setTimeout(counting, myTime);
+    myTimeOut = setTimeout(counting, myTime);
     console.log("this");
     let newDots = document.getElementById("dots");
     let dotSpan = document.createElement("span");
@@ -30,7 +32,7 @@ function counting() {
 }
 
 function stopCounting() {
-    clearTimeout(counting());
+    clearTimeout(myTimeOut);
 }
 
 function grabTempo() {
@@ -42,4 +44,9 @@ function clickButton() {
     grabMeter();
     grabTempo();
     counting();
+
+    if(meter !== "three" && meter !== "four")
+    {
+        alert("pick a meter");
+    }
 }
