@@ -28,11 +28,13 @@ function counting() {
     // dotSpan.style.width = "300px";
     // dotSpan.style.marginLeft = "10px";
     // dotSpan.style.backgroundColor = "purple";
+    array.push(dotSpan);
     newDots.appendChild(dotSpan);
 }
 
 function stopCounting() {
     clearTimeout(myTimeOut);
+    document.getElementById("dots").innerHTML = "";
 }
 
 function grabTempo() {
