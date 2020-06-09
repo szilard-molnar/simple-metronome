@@ -4,6 +4,11 @@ let lineLenght = 0;
 let myTimeOut;
 
 function grabMeter() {
+    if(document.getElementById("two").checked)
+    {
+        meter = document.getElementById("two").value;
+        console.log(meter);
+    }
     if(document.getElementById("three").checked)
     {
         meter = document.getElementById("three").value;
@@ -43,6 +48,15 @@ function counting() {
             lineLenght = 1;
         }
     }
+    else if(meter === "two")
+    {
+        if(lineLenght === 3)
+        {
+            document.getElementById("dots").innerHTML = "";
+            newDots.appendChild(dotSpan);
+            lineLenght = 1;
+        }
+    }
     
 }
 
@@ -62,7 +76,7 @@ function clickButton() {
     grabTempo();
     counting();
 
-    if(meter !== "three" && meter !== "four")
+    if(meter !== "three" && meter !== "four" && meter !== "two")
     {
         alert("pick a meter");
     }
