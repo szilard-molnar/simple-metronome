@@ -1,6 +1,6 @@
 let meter = 0;
 let tempo = 0;
-let array = [];
+let lineLenght = 0;
 let myTimeOut;
 
 function grabMeter() {
@@ -20,16 +20,18 @@ function grabMeter() {
 function counting() {
     let myTime = 60000 / tempo;
     myTimeOut = setTimeout(counting, myTime);
-    console.log("this");
     let newDots = document.getElementById("dots");
     let dotSpan = document.createElement("span");
-    // dotSpan.style.border =  "3px solid black";
-    // dotSpan.style.height = "300px";
-    // dotSpan.style.width = "300px";
-    // dotSpan.style.marginLeft = "10px";
-    // dotSpan.style.backgroundColor = "purple";
-    array.push(dotSpan);
     newDots.appendChild(dotSpan);
+    console.log("linelenght is logged: " + lineLenght);
+    lineLenght++;
+    if(lineLenght === 5)
+    {
+        document.getElementById("dots").innerHTML = "";
+        newDots.appendChild(dotSpan);
+        lineLenght = 1;
+    }
+    
 }
 
 function stopCounting() {
@@ -51,4 +53,5 @@ function clickButton() {
     {
         alert("pick a meter");
     }
+    
 }
