@@ -74,11 +74,16 @@ function grabTempo() {
 function clickButton() {
     grabMeter();
     grabTempo();
-    counting();
 
     if(meter !== "three" && meter !== "four" && meter !== "two")
     {
         alert("pick a meter");
+        location.reload();
     }
-    
+    else if(tempo === "")
+    {
+        alert("select a tempo");
+        location.reload();
+    }
+    counting();
 }
