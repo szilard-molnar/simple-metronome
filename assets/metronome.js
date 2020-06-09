@@ -25,11 +25,23 @@ function counting() {
     newDots.appendChild(dotSpan);
     console.log("linelenght is logged: " + lineLenght);
     lineLenght++;
-    if(lineLenght === 5)
+    if(meter === "four")
     {
-        document.getElementById("dots").innerHTML = "";
-        newDots.appendChild(dotSpan);
-        lineLenght = 1;
+        if(lineLenght === 5)
+        {
+            document.getElementById("dots").innerHTML = "";
+            newDots.appendChild(dotSpan);
+            lineLenght = 1;
+        }
+    }
+    else if(meter === "three")
+    {
+        if(lineLenght === 4)
+        {
+            document.getElementById("dots").innerHTML = "";
+            newDots.appendChild(dotSpan);
+            lineLenght = 1;
+        }
     }
     
 }
@@ -37,6 +49,7 @@ function counting() {
 function stopCounting() {
     clearTimeout(myTimeOut);
     document.getElementById("dots").innerHTML = "";
+    lineLenght = 0;
 }
 
 function grabTempo() {
