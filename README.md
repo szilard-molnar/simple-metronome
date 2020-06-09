@@ -8,6 +8,7 @@ After clicking that "Start" button the user will visually see the beats appearin
 
 ![app screenshot](/assets/images/metronome.png)
 
-Link is coming soon. 
+Here is the link for the app:
+https://szilard-molnar.github.io/simple-metronome/ 
 
 Thank you!
