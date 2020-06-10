@@ -21,6 +21,15 @@ function grabMeter() {
     }    
 }
 
+function play1() {
+    let sound1 = document.getElementById("beat1");
+    sound1.play();
+}
+
+function play2() {
+    let sound2 = document.getElementById("beat2");
+    sound2.play();
+}
 // Need a function that calculates the setTimeout => 60000 / (meter * 1000);
 function counting() {
     let myTime = 60000 / tempo;
@@ -56,6 +65,15 @@ function counting() {
             newDots.appendChild(dotSpan);
             lineLenght = 1;
         }
+    }
+
+    if(lineLenght === 1)
+    {
+        play1();
+    }
+    else if(lineLenght !== 1)
+    {
+        play2();
     }
     
 }
